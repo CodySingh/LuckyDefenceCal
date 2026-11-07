@@ -1,0 +1,24 @@
+
+{
+  "game": "Lucky Defense",
+  "rarity": "mythic",
+  "sourceGameVersion": "2.0.14",
+  "minimumLevel": 1,
+  "maximumLevel": 15,
+  "upgradeCosts": [
+    {"toLevel": 2, "stones": 5, "gold": 1000},
+    {"toLevel": 3, "stones": 10, "gold": 2000},
+    {"toLevel": 4, "stones": 20, "gold": 4000},
+    {"toLevel": 5, "stones": 30, "gold": 6000},
+    {"toLevel": 6, "stones": 50, "gold": 10000},
+    {"toLevel": 7, "stones": 70, "gold": 14000},
+    {"toLevel": 8, "stones": 100, "gold": 20000},
+    {"toLevel": 9, "stones": 130, "gold": 26000},
+    {"toLevel": 10, "stones": 170, "gold": 34000},
+    {"toLevel": 11, "stones": 210, "gold": 42000},
+    {"toLevel": 12, "stones": 260, "gold": 52000},
+    {"toLevel": 13, "stones": 310, "gold": 62000},
+    {"toLevel": 14, "stones": 360, "gold": 72000},
+    {"toLevel": 15, "stones": 430, "gold": 86000}
+  ]
+}
