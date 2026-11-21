@@ -3,12 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator page</title>
+    <title>Upgrade Calculator · Lucky Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h1>Calculator Page</h1>
+    <header class="site-header">
+        <a class="brand" href="index.html">🎲 Lucky Calculator</a>
+        <nav>
+            <a href="calculator.html" aria-current="page">Calculator</a>
+            <a href="beginnerGuide.html">Guide</a>
+        </nav>
+    </header>
 
+    <main class="container">
+        <h1>Upgrade Calculator</h1>
+        <p class="lead">Work out how many stones, duplicates, gold and coins you need to level up.</p>
+
+        <div class="tabs" role="tablist">
+            <button role="tab" data-panel="panel-units">Units</button>
+            <button role="tab" data-panel="panel-treasure">Treasures</button>
+        </div>
+
+        <!-- Units -->
+        <section id="panel-units" role="tabpanel">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-head">
+                        <h2>Unit</h2>
+                        <span id="unit-badge"></span>
+                    </div>
+
+                    <label for="unit-type">Rarity</label>
+                    <select id="unit-type"></select>
+
+                    <div class="row">
+                        <div>
+                            <label for="unit-from">Current level</label>
+                            <select id="unit-from"></select>
+                        </div>
+                        <div>
+                            <label for="unit-to">Target level</label>
+                            <select id="unit-to"></select>
+                        </div>
+                    </div>
+
+                    <div class="chips" aria-label="Common goals">
+                        <span class="muted small">Quick goals:</span>
+                        <button class="chip" data-target="6">Lv 6</button>
+                        <button class="chip" data-target="12">Lv 12</button>
+                        <button class="chip" data-target="15">Lv 15</button>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label for="own-amount" id="own-amount-label">Stones you have</label>
+                            <input id="own-amount" type="number" min="0" inputmode="numeric" placeholder="0">
+                        </div>
+                        <div>
+                            <label for="own-gold">Gold you have</label>
+                            <input id="own-gold" type="number" min="0" inputmode="numeric" placeholder="0">
+                        </div>
+                    </div>
+                    <p class="muted small" id="unit-source"></p>
+                </div>
+
+                <div class="card">
+                    <h2>Total cost</h2>
+                    <div class="stats" id="unit-total"></div>
+                    <h3>What you still need</h3>
+                    <div class="stats" id="unit-need"></div>
+                    <p id="unit-reach" class="reach"></p>
+                    <div class="row add-row">
+                        <input id="unit-name" type="text" placeholder="Unit name (optional), e.g. Bat Man" aria-label="Unit name">
+                        <button id="add-plan" class="btn">Add to plan</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Level-by-level (<span id="res-label">Stones</span>)</h2>
+                <div class="table-wrap">
+                    <table class="data">
+                        <thead><tr><th>Step</th><th>Cost</th><th>Gold</th><th>Running total</th><th>Running gold</th></tr></thead>
+                        <tbody id="unit-breakdown"></tbody>
+                    </table>
+                </div>
+                <p class="muted small">Green rows are steps you can already afford.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-head">
+                    <h2>My upgrade plan</h2>
+                    <button id="clear-plan" class="btn ghost">Clear</button>
+                </div>
+                <p class="muted small">Add several units to see the combined cost. Saved in this browser.</p>
+                <ul class="plan" id="plan-list"></ul>
+                <div class="stats" id="plan-total"></div>
+            </div>
+        </section>
+
+        <!-- Treasures -->
+        <section id="panel-treasure" role="tabpanel" hidden>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-head">
+                        <h2>Treasure</h2>
+                        <span id="tr-badge"></span>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="tr-from">Current level</label>
+                            <select id="tr-from"></select>
+                        </div>
+                        <div>
+                            <label for="tr-to">Target level</label>
+                            <select id="tr-to"></select>
+                        </div>
+                    </div>
+                    <p class="muted small">Treasure upgrades can fail. Each failure raises the success rate a little, up to 10 times, so costs here are averages.</p>
+                    <p class="muted small" id="tr-source"></p>
+                </div>
+                <div class="card">
+                    <h2>Average cost</h2>
+                    <div class="stats" id="tr-total"></div>
+                    <h3>Bad-luck budget</h3>
+                    <p class="muted small">9 out of 10 players finish within this.</p>
+                    <div class="stats" id="tr-bad"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Level-by-level</h2>
+                <div class="table-wrap">
+                    <table class="data">
+                        <thead><tr><th>Step</th><th>Success rate (+ per fail)</th><th>Cost per try</th><th>Avg tries</th><th>90% within</th></tr></thead>
+                        <tbody id="tr-breakdown"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        Fan-made tool, not affiliated with the game's developer. Latest game version seen: <span data-version></span> · Data reviewed <span data-reviewed></span>.
+    </footer>
+
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
