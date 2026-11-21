@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Guide · Lucky Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">🎲 Lucky Calculator</a>
+        <nav>
+            <a href="calculator.html">Calculator</a>
+            <a href="beginnerGuide.html" aria-current="page">Guide</a>
+        </nav>
+    </header>
+
+    <main class="container narrow">
+        <h1>Beginner Guide</h1>
+        <p class="lead">What to level, when to stop, and how much it costs.</p>
+
+        <div class="card notice">
+            <strong>About the data.</strong> Each section says where its information comes from.
+            Anything marked <span class="badge warn">Not yet verified for 2026</span> comes from an undated fan guide,
+            so check it in-game before you spend.
+        </div>
+
+        <section class="card">
+            <h2>What's new in 2026</h2>
+            <ul>
+                <li><strong>2.0.18</strong> (Nov 6, 2026): latest version on the App Store.</li>
+                <li><strong>2.0.17</strong> (Oct 26, 2026): Halloween Festival and a new <em>Relay Defense</em> mode. A PvP revamp is teased as coming soon.</li>
+                <li><strong>2.0.14</strong> (Oct 8, 2026): new Immortal pet <em>Turtle Indy</em>, a hidden-treasure event and new clear missions for each difficulty.</li>
+                <li>Newest unit as of Nov 2, 2026: <strong>Fairy Queen Emily</strong>.</li>
+            </ul>
+            <p class="muted small">Sources: App Store and APKPure update listings; PocketGamer tier list (Nov 2, 2026).</p>
+        </section>
+
+        <section class="card">
+            <div class="card-head"><h2>Level goals: 6, 12 and 15</h2><span class="badge warn">Not yet verified for 2026</span></div>
+            <p>Mythics get a big power jump at <strong>Lv 6</strong> and <strong>Lv 12</strong>, so most players stop at one of those before moving to the next unit.</p>
+            <ul>
+                <li><strong>Lv 1 → 6:</strong> 115 stones, 23,000 gold</li>
+                <li><strong>Lv 6 → 12:</strong> 940 stones, 188,000 gold</li>
+                <li><strong>Lv 12 → 15:</strong> 1,100 stones, 220,000 gold</li>
+            </ul>
+            <p class="muted small">The costs are confirmed for 2.0.14. The advice to stop at Lv 6 and Lv 12 comes from older fan guides.</p>
+        </section>
+
+        <section class="card">
+            <div class="card-head"><h2>Unlocking Immortals</h2><span class="badge warn">Not yet verified for 2026</span></div>
+            <ul>
+                <li>The Immortal tab opens once any Mythic reaches <strong>Lv 12</strong>.</li>
+                <li>Getting a Mythic to <strong>Lv 15</strong> lets you unlock its Immortal form for <strong>6,000 gems</strong>.</li>
+                <li>Immortals level up with <strong>Immortal Stones</strong>, which come from God Mode, the Guild shop, the PvP shop, the normal shop (for gems) and events.</li>
+                <li>Immortal levels cost the same stones as Mythic levels but <strong>twice the gold</strong>.</li>
+            </ul>
+            <p class="muted small">Source: Lucky Defense Guides (legacy mirror), undated.</p>
+        </section>
+
+        <section class="card">
+            <h2>Leveling order (early 2026)</h2>
+            <p>A community tier list from early 2026 suggests this order. Newer units such as Fairy Queen Emily aren't in it.</p>
+            <ol class="order">
+                <li><strong>Mythic Lv 6:</strong> Hailey, Bat Man, Yang Mage, Lancelot, Uchi, Rocket Chu, Ato, Monopoly</li>
+                <li><strong>Mythic Lv 12:</strong> Hailey, Uchi, Rocket Chu, Bat Man, Yang Mage, Lancelot</li>
+                <li><strong>Immortal Lv 6:</strong> Hailey, Bat Man, Ato, plus one of Mama, Bane or Block</li>
+                <li><strong>Immortal Lv 11–12:</strong> Bat Man, Bane, Loca, Block (to Lv 12)</li>
+                <li><strong>Immortal Lv 15:</strong> Bane, Loca, Bat Man, Block</li>
+            </ol>
+            <p class="muted small">Source: Vortex Gaming, “Mythic &amp; Immortal Tier List Update (Including Coldie) and Leveling Order Guide”.</p>
+        </section>
+
+        <section class="card">
+            <h2>All upgrade cost tables</h2>
+            <div id="all-tables"></div>
+            <p class="muted small">Found a number that doesn't match the game? Fix it in <code>data.js</code>.</p>
+        </section>
+
+        <p class="center"><a class="btn big" href="calculator.html">Open the calculator</a></p>
+    </main>
+
+    <footer class="site-footer">
+        Fan-made tool, not affiliated with the game's developer. Latest game version seen: <span data-version></span> · Data reviewed <span data-reviewed></span>.
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

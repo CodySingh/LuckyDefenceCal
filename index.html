@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"
     <title>Lucky Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="calculator.html">Calculator Page</a>
-    
+    <header class="site-header">
+        <a class="brand" href="index.html">🎲 Lucky Calculator</a>
+        <nav>
+            <a href="calculator.html">Calculator</a>
+            <a href="beginnerGuide.html">Guide</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Plan your Lucky Defense upgrades</h1>
+            <p class="lead">Find out exactly how many stones, duplicates, gold and coins you need to level your units and treasures, and how far you can get with what you have now.</p>
+            <a class="btn big" href="calculator.html">Open the calculator</a>
+        </section>
+
+        <div class="grid three">
+            <a class="card link-card" href="calculator.html">
+                <h2>⚔️ Unit upgrades</h2>
+                <p>Mythic, Immortal, Legendary, Epic, Rare and Common, from any level to any level.</p>
+            </a>
+            <a class="card link-card" href="calculator.html">
+                <h2>💎 Treasures</h2>
+                <p>Average and bad-luck costs, including the success-rate boost after each failure.</p>
+            </a>
+            <a class="card link-card" href="beginnerGuide.html">
+                <h2>📘 Beginner guide</h2>
+                <p>Key level goals, a 2026 leveling order, and every cost table in one place.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        Fan-made tool, not affiliated with the game's developer. Latest game version seen: <span data-version></span> · Data reviewed <span data-reviewed></span>.
+    </footer>
+
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
