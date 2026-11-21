@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units · Lucky Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">🎲 Lucky Calculator</a>
+        <nav>
+            <a href="calculator.html">Calculator</a>
+            <a href="units.html" aria-current="page">Units</a>
+            <a href="beginnerGuide.html">Guide</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Mythic &amp; Immortal Units</h1>
+        <p class="lead">Every Mythic, its stats and skills, and the levels where it changes the most. Tap a unit for full details and its Immortal form.</p>
+
+        <div class="grid">
+            <section class="card">
+                <h2>How levels work</h2>
+                <ul class="key-list">
+                    <li><span class="key unlock">★</span> <strong>Lv 6 and Lv 12</strong> are each unit's own milestones. Many unlock a <strong>new skill</strong>, which is usually the biggest power jump.</li>
+                    <li><span class="key upgrade">▲</span> Other Lv 6 and Lv 12 milestones <strong>upgrade</strong> an existing skill.</li>
+                    <li><span class="key small">+</span> Every unit gets the same boosts at Lv 3 (+10% attack), Lv 9 (+10% attack speed), Lv 10 (treasure slot) and Lv 15 (+10% attack and attack speed).</li>
+                </ul>
+            </section>
+            <section class="card">
+                <div class="card-head"><h2>Immortals</h2><span class="badge ok">Verified 2026</span></div>
+                <ul class="key-list plain">
+                    <li id="imm-unlock"></li>
+                    <li id="imm-stones"></li>
+                    <li id="imm-limit"></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="filters card">
+            <input id="unit-search" type="search" placeholder="Search units or skills…" aria-label="Search units">
+            <div class="chips" role="group" aria-label="Damage type">
+                <button class="chip" data-damage="all" aria-pressed="true">All</button>
+                <button class="chip" data-damage="physical" aria-pressed="false">Physical</button>
+                <button class="chip" data-damage="magic" aria-pressed="false">Magic</button>
+                <button class="chip" data-damage="support" aria-pressed="false">Support</button>
+            </div>
+            <label class="check"><input type="checkbox" id="imm-only"> Has an Immortal form</label>
+            <span id="unit-count" class="muted small"></span>
+        </div>
+
+        <div id="unit-grid" class="unit-grid"></div>
+    </main>
+
+    <dialog id="unit-dialog" aria-labelledby="unit-dialog-title">
+        <button id="unit-dialog-close" class="icon-btn dlg-close" aria-label="Close">✕</button>
+        <div id="unit-dialog-body"></div>
+    </dialog>
+
+    <footer class="site-footer">
+        Fan-made, non-commercial tool, not affiliated with the game's developer.
+        Unit art © 111%. Unit info translated from <a href="https://namu.wiki/w/%EC%9A%B4%EB%B9%A8%EC%A1%B4%EB%A7%8E%EA%B2%9C/%EC%98%81%EC%9B%85/%EC%8B%A0%ED%99%94" target="_blank" rel="noopener">namu.wiki</a> (CC BY-NC-SA 2.0 KR).
+        Data reviewed <span data-reviewed></span>.
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="units-data.js"></script>
+    <script src="script.js"></script>
+    <script src="units.js"></script>
+</body>
+</html>
